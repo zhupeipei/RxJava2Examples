@@ -1,12 +1,15 @@
 package com.nanchen.rxjava2examples.util;
 
 import android.content.Context;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.view.ViewPropertyAnimatorListener;
-import android.support.v4.view.animation.FastOutSlowInInterpolator;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Interpolator;
+
+import androidx.core.view.ViewCompat;
+import androidx.core.view.ViewPropertyAnimatorListener;
+import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
+
+import com.nanchen.rxjava2examples.ui.TranslateUpDownBehavior;
 
 /**
  * Author: nanchen
@@ -42,7 +45,7 @@ public class AnimHelper {
         ViewCompat.animate(view).translationY(0).setDuration(DURATION).setListener(listener).setInterpolator(INTERPOLATOR).withLayer().start();
     }
 
-    public static void translateDown(View view, ViewPropertyAnimatorListener listener) {
+    public static void translateDown(View view, TranslateUpDownBehavior.MyViewPropertyAnimatorListener listener) {
         int height = view.getHeight();
         ViewGroup.LayoutParams params = view.getLayoutParams();
         ViewGroup.MarginLayoutParams layoutParams = params instanceof ViewGroup.MarginLayoutParams ? ((ViewGroup.MarginLayoutParams) params) : null;

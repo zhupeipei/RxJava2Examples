@@ -5,7 +5,7 @@ import android.util.Log;
 import com.nanchen.rxjava2examples.R;
 
 import io.reactivex.Observer;
-import io.reactivex.annotations.NonNull;
+import androidx.annotation.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.subjects.PublishSubject;
 

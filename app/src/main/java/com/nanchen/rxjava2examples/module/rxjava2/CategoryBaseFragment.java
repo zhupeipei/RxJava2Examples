@@ -1,12 +1,12 @@
 package com.nanchen.rxjava2examples.module.rxjava2;
 
 import android.graphics.Color;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.nanchen.rxjava2examples.R;
@@ -24,7 +24,7 @@ import butterknife.BindView;
  * Date: 2017-06-30  14:34
  */
 
-public abstract class CategoryBaseFragment extends BaseFragment implements OnRefreshListener {
+public abstract class CategoryBaseFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener {
 
     protected List<OperatorModel> data;
 

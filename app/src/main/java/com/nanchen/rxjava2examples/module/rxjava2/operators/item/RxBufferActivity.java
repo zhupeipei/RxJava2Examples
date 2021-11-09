@@ -7,7 +7,7 @@ import com.nanchen.rxjava2examples.R;
 import java.util.List;
 
 import io.reactivex.Observable;
-import io.reactivex.annotations.NonNull;
+import androidx.annotation.NonNull;
 import io.reactivex.functions.Consumer;
 
 /**

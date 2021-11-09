@@ -9,7 +9,7 @@ import java.util.concurrent.Callable;
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
-import io.reactivex.annotations.NonNull;
+import androidx.annotation.NonNull;
 import io.reactivex.disposables.Disposable;
 
 /**

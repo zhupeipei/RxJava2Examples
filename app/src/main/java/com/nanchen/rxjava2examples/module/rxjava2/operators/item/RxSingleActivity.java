@@ -8,7 +8,7 @@ import java.util.Random;
 
 import io.reactivex.Single;
 import io.reactivex.SingleObserver;
-import io.reactivex.annotations.NonNull;
+import androidx.annotation.NonNull;
 import io.reactivex.disposables.Disposable;
 
 /**

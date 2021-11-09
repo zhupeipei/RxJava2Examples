@@ -1,10 +1,11 @@
 package com.nanchen.rxjava2examples.base;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 
 import com.jaeger.library.StatusBarUtil;
 import com.nanchen.rxjava2examples.R;

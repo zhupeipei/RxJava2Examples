@@ -1,14 +1,16 @@
 package com.nanchen.rxjava2examples.ui;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.view.ViewPropertyAnimatorListener;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.ViewPropertyAnimatorListener;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.nanchen.rxjava2examples.util.AnimHelper;
 
 /**
@@ -43,6 +45,7 @@ public class TranslateUpDownBehavior extends FloatingActionButton.Behavior {
         return nestedScrollAxes == ViewCompat.SCROLL_AXIS_VERTICAL;
     }
 
+    @SuppressLint("RestrictedApi")
     @Override
     public void onNestedScroll(CoordinatorLayout coordinatorLayout, FloatingActionButton child, View target, int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed) {
         if (((dyConsumed > 0 && dyUnconsumed == 0) || (dyConsumed == 0 && dyUnconsumed > 0)) && !isAnimating && child.getVisibility() == View.VISIBLE) {
@@ -61,7 +64,7 @@ public class TranslateUpDownBehavior extends FloatingActionButton.Behavior {
         }
     }
 
-    private class MyViewPropertyAnimatorListener implements ViewPropertyAnimatorListener {
+    public class MyViewPropertyAnimatorListener implements ViewPropertyAnimatorListener {
 
         @Override
         public void onAnimationStart(View view) {
